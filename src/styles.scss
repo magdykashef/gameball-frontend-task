@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+/*---------------- CSS reset -----------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*-------------- main variables --------------*/
+:root {
+  --primary-bg-color: white;
+  --secondry-bg-color: #f6f6f6;
+  --dark-black: #292C3B;
+  --lite-black: #424242;
+  --gray: #A9ABB2;
+  --green: #3DDC97;
+  --blue: #256EFF;
+  --primary-font: 'Poppins', sans-serif;
+  --secondry-font: 'Source Sans Pro', sans-serif;
+  font-size: 6.25%;
+}
+
+body {
+  font-size: 16rem;
+  font-family: var(--primary-font);
+}
