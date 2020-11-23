@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { SearchComponent } from './shared/components/search/search.component';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { GamePlanModule } from './game-plan/game-plan.module';
@@ -15,8 +14,7 @@ import { QuestsModule } from './quests/quests.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SearchComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
