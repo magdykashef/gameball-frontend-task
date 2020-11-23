@@ -1,0 +1,71 @@
+/*****************start search bar**********************/
+.search-bar {
+  width: 100%;
+  height: 52px;
+  background-color: var(--secondry-bg-color);
+  position: relative;
+  border-radius: 4rem;
+  
+  a{
+    display: inline-block;
+    font-size: 12rem;
+    color: var(--lite-black);
+    text-decoration: none;
+    position: absolute;
+  }
+
+  .filter {
+    left: 24rem;
+    top: 15rem;
+
+    .row {
+      width: 75rem;
+      height: 20rem;
+    }
+  }
+
+  .sort {
+    left: 150rem;
+    top: 15rem;
+
+    .row {
+      width: 74rem;
+      height: 20rem;
+    }
+  }
+
+  .search {
+    right: 17rem;
+    top: 15rem;
+
+    .row {
+      width: 71rem;
+      height: 20rem;
+    }
+  }
+
+  .filter,
+  .sort,
+  .search {
+
+    //innerText
+    span span {
+      &:nth-child(2) {
+        position: relative;
+        left: 9rem;
+        bottom: -1rem;
+      }
+    }
+
+    //dropdown icons(filter icon, sort icon)
+    span span {
+      &:nth-child(3) {
+        position: relative;
+        left: 13rem;
+        bottom: -2rem;
+      }
+    }
+  }
+}
+
+/*****************end search bar**********************/
