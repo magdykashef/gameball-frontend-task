@@ -1,22 +1,24 @@
+
+//custom hover and active mark
 .sidebar-active-link {
   &:before {
     content: '';
     position: absolute;
-    left: 12rem;
+    left: 0rem;
     height: 46rem;
-    width: 2%;
+    width: 1.1%;
     background-color: var(--blue);
-    border-top-right-radius: 25rem;
-    border-bottom-right-radius: 25rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
   }
 }
 
-/*----------------------- start sidebar -----------------------*/
+/***********************start sidebar***********************/
 .sidebar {
   background: var(--secondry-bg-color);
   height: 800px;
 
-  /*----------------------- start sidebar items -----------------------*/
+  /***********************start sidebar items***********************/
   ul {
     width: 95%;
 
@@ -25,29 +27,24 @@
       height: 46rem;
       width: 100%;
       margin-bottom: 6.5%;
-      padding-left: 10%;
 
+      // excluding the logo form the blue active mark
       &:not(:first-child) {
+
+        // apply blue active mark to other links
         &:hover {
           @extend .sidebar-active-link;
         }
       }
 
+      //the logo <li>
       &:first-child {
         padding-top: 3%;
         margin-bottom: 29.8%;
       }
 
+      // account settings <li>
       &:last-child {
-
-        .row,
-        .col {
-          margin: 0;
-          padding: 0;
-        }
-
-        position: relative;
-        left: -14rem;
         -webkit-transform: translateY(330rem);
         -moz-transform: translateY(330rem);
         -ms-transform: translateY(330rem);
@@ -55,79 +52,92 @@
         transform: translateY(330rem);
       }
 
-      /*----------------------- start logo -----------------------*/
-      .logo span img {
-        margin-right: 2%;
-        width: 130rem;
-        height: 34rem;
+      /***********************start logo***********************/
+      .sidebar-logo {
+        width: auto !important;
+        height: auto !important;
+
+        span img {
+          margin-right: 2%;
+          width: 130rem;
+          height: 34rem;
+        }
       }
 
-      /*----------------------- end logo -----------------------*/
+      /***********************end logo***********************/
 
       a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding-left: 10%;
         text-decoration: none;
         color: var(--dark-black);
 
-        /*----------------------- start side icons -----------------------*/
-        .icons {
+        /***********************start side icons***********************/
+        .sidebar-icons {
           position: relative;
           top: 10rem;
           margin-right: 3.5%;
         }
 
-        .avatar {
+        .sidebar-avatar img {
+          display: inline-block;
           position: relative;
-          bottom: 5rem;
-
-          img {
-            width: 32rem;
-            height: 32rem;
-            border-radius: 50rem;
-            -webkit-border-radius: 50rem;
-            -moz-border-radius: 50rem;
-            -ms-border-radius: 50rem;
-            -o-border-radius: 50rem;
-          }
+          top: 4rem;
+          width: 32rem;
+          height: 32rem;
+          border-radius: 50rem;
+          -webkit-border-radius: 50rem;
+          -moz-border-radius: 50rem;
+          -ms-border-radius: 50rem;
+          -o-border-radius: 50rem;
         }
 
-        .username,
-        .account {
-          position: relative;
-          top: 5rem;
-          font-family: var(--secondry-font-family);
+        //user name and account container
+        span {
+          display: inline-block;
+        }
+
+        .sidebar-username,
+        .sidebar-account {
           display: block;
+          margin-left: 8.96rem;
           line-height: 1.2;
+          font-family: var(--secondry-font-family);
         }
 
-        .username {
+        .sidebar-username {
           font-size: 14rem;
           font-weight: 600;
           letter-spacing: -.5rem;
           color: var(--dark-black);
         }
 
-        .account {
+        .sidebar-account {
           font-size: 12rem;
           color: var(--lite-black);
         }
 
-        /*----------------------- end side icons -----------------------*/
+        /***********************end side icons***********************/
       }
 
-      /*----------------------- end sidebar items -----------------------*/
+      /***********************end sidebar items***********************/
     }
   }
 }
 
-/*----------------------- end sidebar -----------------------*/
+/***********************end sidebar***********************/
 
 
 
 
-/*----------------------- start content -----------------------*/
+/************************start content (router-outlet)************************/
+
 .content {
   height: 800px;
-  padding-left: 3%;
+  width: 100%;
+  padding-left: 35rem;
   background-color: var(--primary-bg-color);
   border-top-left-radius: 1.5%;
   border-bottom-left-radius: 1.5%;
@@ -137,7 +147,6 @@
   -ms-transform: translateX(-3%);
   -o-transform: translateX(-3%);
   transform: translateX(-3%);
-
 }
 
-/*----------------------- end content -----------------------*/
+/************************end (router-outlet)************************/

@@ -5,9 +5,9 @@
       <!-------------------------------------start sidebar items------------------------------------->
       <ul>
         <li>
-          <a class="logo" [routerLink]="['/']">
+          <a class="sidebar-logo" [routerLink]="['/']">
             <span>
-              <img class="icons" src="../assets/images/icon_Logo-M@2x.png" alt="gameball logo">
+              <img class="sidebar-icons" src="../assets/images/icon_Logo-M@2x.png" alt="gameball logo">
             </span>
           </a>
         </li>
@@ -15,7 +15,7 @@
         <li>
           <a [routerLink]="['/dashboard']" routerLinkActive="sidebar-active-link">
             <span>
-              <img class="icons" src="../assets/images/icon_Dashboard_HiFi-M_InActive@2x.png" alt="dashbord icon">
+              <img class="sidebar-icons" src="../assets/images/icon_Dashboard_HiFi-M_InActive@2x.png" alt="dashbord icon">
             </span>
             Dashboard
           </a>
@@ -24,7 +24,7 @@
         <li>
           <a [routerLink]="['/gameplan']" routerLinkActive="sidebar-active-link">
             <span>
-              <img class="icons" src="../assets/images/icon_GamePlan_HiFi-M_Active@2x.png" alt="game plan icon">
+              <img class="sidebar-icons" src="../assets/images/icon_GamePlan_HiFi-M_Active@2x.png" alt="game plan icon">
             </span>
             Game Plan
           </a>
@@ -33,28 +33,28 @@
         <li>
           <a [routerLink]="['/levels']" routerLinkActive="sidebar-active-link">
             <span>
-              <img class="icons" src="../assets/images/rocket@2x.png" alt="levels icon">
+              <img class="sidebar-icons" src="../assets/images/rocket@2x.png" alt="levels icon">
             </span>
             Levels
           </a>
         </li>
-        <!-- start account settings link -->
+        
+        <!-------------------------------------start account settings link------------------------------------->
         <li>
           <a [routerLink]="['/account']" routerLinkActive="sidebar-active-link">
 
-            <span class="row">
-
-              <span class="col-2 avatar">
-                <img class="icons" src="../assets/images/Avatar@2x.jpg" alt="account avatar">
-              </span>
-
-              <span class="col-10">
-                <span class="username">Hello, Anne!</span>
-                <span class="account">Account Settings</span>
-              </span>
+            <span class="sidebar-avatar">
+              <img class="sidebar-icons" src="../assets/images/Avatar@2x.jpg" alt="account avatar">
             </span>
+
+            <span>
+              <span class="sidebar-username">Hello, Anne!</span>
+              <span class="sidebar-account">Account Settings</span>
+            </span>
+
           </a>
-        </li><!-- end account settings link -->
+        </li>
+        <!-------------------------------------start account settings link------------------------------------->
       </ul>
       <!-------------------------------------end sidebar items------------------------------------->
     </div>
