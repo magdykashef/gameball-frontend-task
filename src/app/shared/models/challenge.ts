@@ -7,5 +7,5 @@ export interface IChallenge {
 	points: number;
 	milestone: number;
 	quests: string;
-	isActive: boolean;
+	status: string;
 }
