@@ -1,11 +1,10 @@
-import { LevelsComponent } from './levels/levels.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { SearchComponent } from './shared/components/search/search.component';
 import { AppComponent } from './app.component';
+import { SearchComponent } from './shared/components/search/search.component';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { GamePlanModule } from './game-plan/game-plan.module';

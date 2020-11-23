@@ -19,12 +19,12 @@
   --gray: #A9ABB2;
   --green: #3DDC97;
   --blue: #256EFF;
-  --primary-font: 'Poppins', sans-serif;
-  --secondry-font: 'Source Sans Pro', sans-serif;
+  --primary-font-family: 'Poppins', sans-serif;
+  --secondry-font-family: 'Source Sans Pro', sans-serif;
   font-size: 6.25%;
 }
 
 body {
   font-size: 16rem;
-  font-family: var(--primary-font);
+  font-family: var(--primary-font-family);
 }
