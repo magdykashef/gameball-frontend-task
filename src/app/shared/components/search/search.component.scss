@@ -11,7 +11,8 @@
     height: 100%;
     font-size: 12rem;
     font-family: var(--primary-font-family);
-    color: var(--lite-black);
+    background-color: var(--secondry-bg-color);
+    outline: none;
     cursor: pointer;
 
     .row {
