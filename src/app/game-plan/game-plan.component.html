@@ -10,7 +10,7 @@
 
 
   <!-------------------------------------start navbar dropdown------------------------------------->
-  <div class="navbar-dropdown col-8">
+  <div class="navbar-dropdown">
     <button class="dropdown-btn row">
 
       <span class="col-4">
@@ -48,13 +48,13 @@
 <div class="taps row align-items-center">
   <ul class="col-12">
     <li class="taps-item">
-      <a role="button" [routerLink]="[ '/levels']" routerLinkActive=".active-tap">Levels</a>
+      <a [routerLink]="['levels']" routerLinkActive="active-tap">Levels</a>
     </li>
     <li class="taps-item">
-      <a role="button" [routerLink]="[ '/challenges']" routerLinkActive=".active-tap">Challenges</a>
+      <a [routerLink]="['challenges']" routerLinkActive="active-tap">Challenges</a>
     </li>
     <li class="taps-item">
-      <a role="button" [routerLink]="[ '/quests']" routerLinkActive=".active-tap">Quests</a>
+      <a [routerLink]="['quests']" routerLinkActive="active-tap">Quests</a>
     </li>
   </ul>
 </div>
@@ -65,3 +65,5 @@
 <!-------------------------------------start search bar------------------------------------->
 <app-search></app-search>
 <!-------------------------------------end search bar------------------------------------->
+
+<router-outlet></router-outlet>
