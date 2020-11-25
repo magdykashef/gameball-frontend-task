@@ -1,0 +1,70 @@
+{
+	"challenges": [
+		{
+			"id": 1,
+			"title": "click & collect",
+			"date": "12/12/2018 at 13:00",
+			"description": "It is a long established fact that a reader will be distracted by the readable eye.",
+			"frubies": 5000,
+			"points": 2500,
+			"milestone": 3,
+			"quests": "the big thing",
+			"status": "active"
+		},
+		{
+			"id": 2,
+			"title": "click & collect",
+			"date": "12/12/2018 at 13:00",
+			"description": "It is a long established fact that a reader will be distracted by the readable eye.",
+			"frubies": 5000,
+			"points": 2500,
+			"milestone": 3,
+			"quests": "the big thing",
+			"status": "inactive"
+		},
+		{
+			"id": 3,
+			"title": "click & collect",
+			"date": "12/12/2018 at 13:00",
+			"description": "It is a long established fact that a reader will be distracted by the readable eye.",
+			"frubies": 5000,
+			"points": 2500,
+			"milestone": 3,
+			"quests": "the big thing",
+			"status": "active"
+		},
+		{
+			"id": 4,
+			"title": "click & collect",
+			"date": "12/12/2018 at 13:00",
+			"description": "It is a long established fact that a reader will be distracted by the readable eye.",
+			"frubies": 5000,
+			"points": 2500,
+			"milestone": 3,
+			"quests": "the big thing",
+			"status": "active"
+		},
+		{
+			"id": 5,
+			"title": "click & collect",
+			"date": "12/12/2018 at 13:00",
+			"description": "It is a long established fact that a reader will be distracted by the readable eye.",
+			"frubies": 5000,
+			"points": 2500,
+			"milestone": 3,
+			"quests": "the big thing",
+			"status": "active"
+		},
+		{
+			"id": 6,
+			"title": "click & collect",
+			"date": "12/12/2018 at 13:00",
+			"description": "It is a long established fact that a reader will be distracted by the readable eye.",
+			"frubies": 5000,
+			"points": 2500,
+			"milestone": 3,
+			"quests": "the big thing",
+			"status": "inactive"
+		}
+	]
+}
