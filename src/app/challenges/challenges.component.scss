@@ -1,0 +1,186 @@
+/***************************************start challenges status-bar***************************************/
+.challenge-status-bar {
+  margin-top: 33rem;
+  height: 45rem;
+  width: 104%;
+  position: relative;
+
+  .challenges-summury {
+    width: 114rem;
+    height: 17rem;
+    font-size: 12rem;
+    color: var(--gray);
+  }
+
+  .btn-create-new {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 214rem;
+    height: 20rem;
+    border: none;
+    outline: none;
+    background-color: var(--primary-bg-color);
+    font-size: 12rem;
+    font-weight: 700;
+    color: var(--blue);
+    font-family: var(--primary-font-family);
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      top: 0rem;
+      right: 0rem;
+    }
+
+    span {
+      position: absolute;
+      top: 1rem;
+      right: 27rem;
+    }
+  }
+}
+
+/***************************************End challenges status-bar***************************************/
+
+
+
+/***************************************start challenges grid***************************************/
+.challenges {
+  width: 104%;
+  height: 530rem;
+
+  .challenge-card {
+    position: relative;
+    border: 1rem solid var(--secondry-bg-color);
+    height: 237rem;
+    min-width: 320rem;
+    margin-bottom: 15rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    border-radius: 5rem;
+
+    .card-status {
+      width: 100%;
+      height: 23rem;
+      font-size: 8rem;
+      font-weight: 700;
+      letter-spacing: 0.3rem;
+      padding-right: 9rem;
+      padding-top: 12rem;
+    }
+
+    .status-active {
+      color: var(--green);
+    }
+
+    .status-inactive {
+      color: var(--gray);
+    }
+
+    .status-icon {
+      width: 8rem;
+      height: 8rem;
+      margin-left: 8rem;
+      border-color: var(--green);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+    }
+
+    .status-icon-active {
+      @extend.status-icon;
+      background-color: var(--green);
+      box-shadow: 0rem 3rem 6rem rgba(61, 220, 151, 0.5);
+
+    }
+
+    .status-icon-inactive {
+      @extend .status-icon;
+      background-color: var(--gray);
+    }
+
+    /***************************************start card content***************************************/
+    .card-content {
+      position: absolute;
+      top: 22px;
+      left: 25rem;
+      width: 270rem;
+      height: 190rem;
+
+      button {
+        width: 100%;
+        height: 50rem;
+        background-color: var(--primary-bg-color);
+        border: none;
+        outline: none;
+        margin-bottom: 16rem;
+        cursor: pointer;
+      }
+
+      .card-icon {
+        margin-right: 12rem;
+      }
+
+      .card-title {
+        text-align: left;
+        font-family: var(--primary-font-family);
+        color: ver(--lite-black);
+
+        p {
+          &:first-child {
+            padding-top: 10rem;
+            font-size: 14rem;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            font-size: 8rem;
+          }
+        }
+      }
+
+      .card-description {
+        font-size: 12rem;
+        width: 260rem;
+        height: 35rem;
+        color: var(--gray);
+        margin-bottom: 16rem;
+      }
+
+      .statistics {
+        width: 103rem;
+        height: 20rem;
+        margin: 0 12rem 8rem 0;
+        font-size: 10rem;
+        font-weight: 500;
+        color: var(--dark-black);
+
+        img {
+          margin-right: 3rem;
+        }
+
+        &:last-child {
+          background-color: var(--secondry-bg-color);
+          -webkit-border-radius: 4rem;
+          -moz-border-radius: 4rem;
+          -ms-border-radius: 4rem;
+          -o-border-radius: 4rem;
+          border-radius: 4rem;
+
+          img {
+            margin-left: 7rem;
+          }
+        }
+      }
+    }
+
+    /***************************************End card content***************************************/
+  }
+}
+
+/***************************************End challenges grid***************************************/

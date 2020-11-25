@@ -1,1 +1,105 @@
-<p>challenges works!</p>
+<section>
+  <!-------------------------------------start challenges status-bar------------------------------------->
+  <div class="challenge-status-bar row justify-content-between">
+    <p class="challenges-summury">4 Challenges</p>
+    <button class="btn-create-new">
+      <span>
+        Create New Challenge
+      </span>
+      <img src="../../assets/images/icon_Add-LoFi_20px@2x.png" alt=" add challenge icon">
+    </button>
+  </div>
+  <!-------------------------------------End challenges status-bar------------------------------------->
+
+
+
+
+  <!-------------------------------------start challenges grid------------------------------------->
+  <div class="challenges row justify-content-around" *ngIf="challenges$ | async as challenges">
+
+    <!-------------------------------------start challenges card------------------------------------->
+    <div class="challenge-card" *ngFor="let challenge of challenges">
+
+      <!-------------------------------------start card status bar------------------------------------->
+      <div class="card-status d-flex justify-content-end align-items-center">
+        <span [ngClass]="challenge.status == 'active'? 'status-active' : 'status-inactive'">
+          {{challenge.status | uppercase }}
+        </span>
+        <span [ngClass]="challenge.status == 'active'? 'status-icon-active' : 'status-icon-inactive'"></span>
+      </div>
+      <!-------------------------------------End card status bar------------------------------------->
+
+
+
+
+      <!-------------------------------------start card content------------------------------------->
+      <div class="card-content">
+
+        <!-------------------------------------start card header------------------------------------->
+        <button class="row align-items-center">
+
+          <!-------------------------------------start card icon------------------------------------->
+          <span class="col-2 card-icon">
+            <img src="../../assets/images/icon_ChallengeBlank-HiFi_50px@2x.png" alt="challenge icon">
+          </span>
+          <!-------------------------------------End card icon------------------------------------->
+
+          <!-------------------------------------start card title & date------------------------------------->
+          <span class="col-8 card-title">
+            <p>
+              {{challenge.title | titlecase }}
+            </p>
+            <p>
+              {{challenge.date }}
+            </p>
+          </span>
+          <!-------------------------------------End card title & date------------------------------------->
+        </button>
+        <!-------------------------------------End card header------------------------------------->
+
+
+
+
+        <!-------------------------------------start card description------------------------------------->
+        <div class="card-description">
+          <P>
+            {{challenge.description}}
+          </P>
+        </div>
+        <!-------------------------------------End card description------------------------------------->
+
+
+
+
+        <!-------------------------------------start card statistics------------------------------------->
+        <div class="row">
+
+          <div class="statistics row align-items-center">
+            <img src="../../assets/images/icon_Frubies-HiFi_20px@2x.png" alt="frubies icon">
+            {{challenge.frubies | number}} {{'frubies' | titlecase}}
+          </div>
+
+          <div class="statistics row align-items-center">
+            <img src="../../assets/images/icon_Points_HiFi-S@2x.png" alt="points icon">
+            {{challenge.points | number}} {{'points' | titlecase}}
+          </div>
+
+          <div class="statistics row align-items-center">
+            <img src="../../assets/images/icon_Milestones_HiFi-S@2x.png" alt="milestones icon">
+            {{challenge.milestone | number}} {{'milestones' | titlecase}}
+          </div>
+
+          <div class="statistics row align-items-center">
+            <img src="../../assets/images/icon_Tag_LoFi-XS@2x.png" alt="quests icon">
+            <span>{{challenge.quests | titlecase}}</span>
+          </div>
+
+        </div>
+        <!-------------------------------------End card statistics------------------------------------->
+      </div>
+      <!-------------------------------------End card content------------------------------------->
+    </div>
+    <!-------------------------------------End challenges card------------------------------------->
+  </div>
+  <!-------------------------------------End challenges grid------------------------------------->
+</section>
