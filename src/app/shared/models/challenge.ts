@@ -1,6 +1,6 @@
 export interface IChallenge {
 	id: number;
-	name: string;
+	title: string;
 	date: string;
 	description: string;
 	frubies: number;
