@@ -1,6 +1,7 @@
+import { IChallenge } from './../shared/models/challenge';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { EMPTY } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 import { ChallengesService } from '../services/challenges.service';
 
@@ -13,16 +14,22 @@ import { ChallengesService } from '../services/challenges.service';
 export class ChallengesComponent {
 
   errorMessage: string = '';
+  activeChallenges: IChallenge[] = [];
 
   //get challenges data form service
   challenges$ = this.challengeservice.getAllChallenges$
     .pipe(
+      tap(// get active challenges number
+        challenges => this.activeChallenges = challenges.filter(challenge => challenge.status === 'active')
+      ),
       catchError(error => {
         this.errorMessage = error;
         return EMPTY;
       })
     );
 
-  constructor(private challengeservice: ChallengesService) { }
+  constructor(private challengeservice: ChallengesService) { 
+    console.log(this.errorMessage);
+  }
 
 }
