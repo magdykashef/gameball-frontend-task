@@ -11,13 +11,13 @@ import { IChallenge } from './../shared/models/challenge';
 })
 export class ChallengesService {
 
-  private url = 'http://localhost:3000';
+  private url = 'api/';
 
   constructor(private http: HttpClient) { }
 
 
   // get all challenges from database
-  getAllChallenges$ = this.http.get<IChallenge[]>(`${this.url}/challenges`)
+  getAllChallenges$ = this.http.get<IChallenge[]>(`${this.url}challenges`)
     .pipe(
       catchError(this.handleError)
     );
