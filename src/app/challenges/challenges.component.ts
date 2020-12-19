@@ -20,16 +20,18 @@ export class ChallengesComponent {
   challenges$ = this.challengeservice.getAllChallenges$
     .pipe(
       tap(// get active challenges number
-        challenges => this.activeChallenges = challenges.filter(challenge => challenge.status === 'active')
+        challenges => {
+          this.activeChallenges = challenges.filter(challenge => challenge.status === 'active');
+          console.log("activeChallenges: " + this.activeChallenges.length);
+        }
       ),
       catchError(error => {
         this.errorMessage = error;
+        console.log(this.errorMessage);
         return EMPTY;
       })
     );
 
-  constructor(private challengeservice: ChallengesService) { 
-    console.log(this.errorMessage);
-  }
+  constructor(private challengeservice: ChallengesService) { }
 
 }
